@@ -1,0 +1,29 @@
+/* 1. 引入像素字体 (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* 2. 定义星露谷调色板 */
+:root {
+  --sdv-bg: #eac285;       /* 对话框底色（浅木纹） */
+  --sdv-border: #583220;   /* 深褐色边框 */
+  --sdv-shadow: #c56e33;   /* 阴影色 */
+  --sdv-highlight: #f6e3c4;/* 高光色 */
+  --page-bg: #5c9e6f;      /* 网页背景（草地绿） */
+}
+
+/* 3. 全局重置 */
+body {
+  margin: 0;
+  background-color: var(--page-bg); /* 先铺满草地 */
+  font-family: 'VT323', monospace;  /* 应用像素字体 */
+  font-size: 20px;
+  color: #3b200d;
+  
+  /* 4. 【核心】强制像素化渲染，防止模糊 */
+  image-rendering: pixelated; 
+  
+  /* 让内容居中方便预览 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
